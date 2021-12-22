@@ -1,0 +1,21 @@
+﻿<Application x:Class="UiExporter.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:UiExporter"
+             xmlns:converters="clr-namespace:UiExporter.Converters"
+             StartupUri="Views/MainVIew.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/WPFUI;component/Styles/Theme/Dark.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/WPFUI;component/Styles/WPFUI.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <FontFamily x:Key="SegoeFluentIcons">pack://application:,,,/;component/Fonts/#Segoe Fluent Icons</FontFamily>
+
+            <converters:NullVisibilityConverter x:Key="NullVisibilityConverter"/>
+            <converters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+            <converters:BooleanInvertedToVisibilityConverter x:Key="BooleanInvertedToVisibilityConverter"/>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
