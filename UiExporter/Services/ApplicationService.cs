@@ -68,7 +68,6 @@ namespace UiExporter.Services
                 catch (Exception e)
                 {
                     Debug.WriteLine(e.ToString());
-                    System.IO.File.WriteAllText("log.txt",e.ToString());
                 }
             }
 
